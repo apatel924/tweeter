@@ -26,6 +26,15 @@ main {
   flex-direction: column;
   width: 90%;
   margin: auto;
+  background-color: inherit;
+}
+
+.container {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*
