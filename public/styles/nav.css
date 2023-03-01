@@ -24,3 +24,11 @@ nav button.nav-text-right {
   border-radius: 2em;
   position: relative;
 }
+
+nav > span {
+  align-self: center;
+  font-family: Bungee;
+  margin-top: 30px;
+  font-size: 36px;
+}
+
