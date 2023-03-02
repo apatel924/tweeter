@@ -33,18 +33,6 @@ main {
   background-color: inherit;
 }
 
-.container {
-  background-color: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- .tweet-container {
-  width: 100%;
- }

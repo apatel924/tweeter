@@ -14,19 +14,30 @@ nav .title {
   font-size: 2em;
 }
 
-nav button.nav-text-right {
-  font-size: 1em;
-  padding: 0.5em 1em;
-  background-color: #FFFFFF;
-  color: #4056A1;
-  border-radius: 2em;
-  position: relative;
-}
-
+/* new tweet */
 nav > span {
   align-self: center;
   font-family: Bungee;
   margin-top: 30px;
   font-size: 36px;
 }
+
+.nav--write-new-tweet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav--write-new-tweet > p {
+  margin: 0px;
+  margin-top: 30px;
+  font-family: sans-serif;
+  font-weight: 250;
+}
+
+.nav--write-new-tweet > p > span {
+  font-weight: bold;
+}
+
 
