@@ -15,11 +15,30 @@
   border-bottom: 2px solid black;
 }
 
-.tweet-sub {
-  background-color:blue;
-  border: none;
-  color: white;
-  outline: none;
+.new-tweet--input {
+  display:block;
+  height: 1em;
+  width: 100%;
+  background-color: transparent;
+  resize: none;
+  border: 0px;
+  border-bottom: 0.1em solid black;
+}
+
+.new-tweet--footer > button {
+  background-color: #2a4fc9;
+  color: #ffff;
+  border: 0px;
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.counter {
+  margin-top: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: black;
 }
 
 .tweet-counter {
@@ -31,7 +50,7 @@
   font-family: 'Bungee', cursive;
 }
 
-#tweet-text {
+.tweet-text {
   background-color: transparent;
   border: none;
   outline: none;
@@ -41,9 +60,3 @@
   margin-top: 1%;
 }
 
-.counter {
-  margin-top: 1em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  color: black;
-}

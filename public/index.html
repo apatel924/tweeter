@@ -25,6 +25,9 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+
   </head>
 
   <body class="body">
@@ -51,18 +54,37 @@
     <main class="container">
       <section class="new-tweet">  
       <form action ="/tweets" method="POST">
-        <div class="tweet-input">
-          <label for="tweet-text" ><b>What are you humming about?</b></label>
-          <textarea name="text" id="tweet-text"></textarea>  
-        </div>
-        <div class="tweet-counter">
-          <button type="submit" class= "tweet-sub"><small>Tweet</small></button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <section class="tweet-container">
-    </section>
-  </main>
+        <textarea 
+        class="new-tweet--input"
+        name="text" 
+        id="tweet-text" 
+        placeholder="What are you humming about?"></textarea>
+      <div class="new-tweet--footer">
+        <button type="submit">Tweet</button>
+        <output name="counter" class="counter" for="tweet-text">140</output>
+      </div>
+    </form>
+  </section>
+  <section id="tweets-container">
+    <header class="tweet-header">
+      <div>
+        <img src="/images/noun-grandma-2374487.png"/>
+        <p>Username</p>
+      </div>
+      <p>@userhandle</p>
+    </header>
+    <article class="tweet">
+      Hello world!
+    </article>
+    <footer class="tweet-footer">
+      <p>10 days ago</p>
+      <div>
+        <i class="fa-solid fa-flag"></i>
+        <i class="fa-solid fa-retweet"></i>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+    </footer>
+  </section>
+</main>
 </body>
 </html>

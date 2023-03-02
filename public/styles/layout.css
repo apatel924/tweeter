@@ -1,5 +1,3 @@
-@import url('color-font.css');
-
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -16,8 +14,14 @@ html {
  * Global layout stuff
  */
 
-body {
+ body {
+  display: flex;
+  flex-direction: column;
+  color:grey;
+  background-color:grey;
   font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  align-items: center;
 }
 
 main {
