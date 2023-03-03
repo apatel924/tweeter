@@ -33,43 +33,36 @@
 
   </head>
 
-  <body class="body">
+  <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span> tweeter </span>
-      <div class="nav--write-new-tweet">
-        <button class="nav-text-right"> 
-          <p><span>write</span> a new tweet</p> 
-          <i class="fa fa-angle-double-down"></i>
-        </button>
-        </div>
+      <span>tweeter</span>
+      <div class="write-new-tweet">
+        <p><span>Write</span> a new tweet</p>
+        <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2 style="margin-top: 0px";>Ashish Patel</h2>
-      </div>
-  </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">  
-      <form action ="/tweets" method="POST">
-        <textarea 
-          class="new-tweet--input"
-          name="text" 
-          id="tweet-text" 
-          placeholder="What are you humming about?"></textarea>
-        <div class="new-tweet--footer">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+    <header class="profile">
+      <img class="profile-avatar" src="/images/profile-hex.png">
+      <h2 class="profile-username">Ashish Patel</h2>
+    </header>
+    <section class="content">
+      <section class="new-tweet">
+        <form>
+          <textarea 
+            id="tweet-text" 
+            name="text" 
+            placeholder="What are you humming about?"></textarea>
+          <div id="error"></div>
+          <div class="new-tweet-footer">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     <h3>Latest Tweets</h3>
     <section id="tweets-container">
     </section>

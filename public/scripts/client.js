@@ -7,30 +7,17 @@
 
 
 $(document).ready(() => {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1677536197452
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1677622597452
-    }
-  ]
+  const $tweetsContainer = $('#tweets-container');
+  const $error = $("#error");
+  const $form = $("form");
+  const $newTweetSection = $(".new-tweet");
+  const $newTweetWrite = $(".nav--write-new-tweet");
+  /* Helper fuctions */
+  const escape = (str) => {
+    let div = $("<div>").text(str);;
+    return div[0].innerHTML;
+  };
+
   const createTweetElement = (tweetData) => {
     const user = tweetData.user;
     const content = tweetData.content;
@@ -60,33 +47,75 @@ $(document).ready(() => {
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      tweetsContainer.prepend($tweet);
     }
-  }
-  renderTweets(data);
-  const $form = $("form");
+  };
+  const resetFrom = () => {
+    $form.trigger("reset");
+    console.log($form);
+
+    $form[0][2].innerText = 140;
+  };
+
+  const formInputError = (message) => {
+    $error.empty();
+    $error.append('<i class="fa-solid fa-triangle-exclamation"></i>');
+    $error.append(`<p>${message}</p>`);
+  };
+
+  const loadTweets = () => {
+    $.ajax({
+      method: "GET",
+      url: "/tweets",
+      dataType: "JSON",
+      success: (response) => {
+        $tweetsContainer.empty();
+        renderTweets(response);
+      },
+    });
+  };
+
+  $form.on("input", (event) => {
+    event.preventDefault();
+    $error.empty()
+  });
+
   $form.on("submit", (event) => {
     event.preventDefault();
-    const urlencoded = $form.serialize();
-    console.log(urlencoded);
 
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: urlencoded,
-      success:  (response) => {
-        console.log("Created Tweet");
-      }, 
-    });
-  });
+    const userInput = event.currentTarget[0].value;
 
-  const loadTweets = $.ajax({
-    method: "GET",
-    url: "/tweets",
-    dataType: "JSON",
-    success: (responseData) => {
-      renderTweets(responseData);
-    },
+    const noInput = "Please input message";
+
+    const inputOverLimit = "Message too long";
+
+    if (!userInput) {
+     formInputError(noInput);
+    } else if (userInput.length > 140) {
+      formInputError(inputOverLimit);
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $form.serialize(),
+        success:  (response) => {
+          $error.empty();
+          loadTweets();
+          resetFrom();
+          $newTweetSection.slideUp();
+        }, 
+      });
+    }
   });
-  loadTweets;
+  
+  $newTweetWrite.on("click", (event) => {
+    if ($newTweetSection.is(":hidden")) {
+      $newTweetSection.slideDown();
+      $(".new-tweet--input").focus();
+      return
+    }
+
+    $newTweetSection.slideUp();
+  });
+  loadTweets();
 });

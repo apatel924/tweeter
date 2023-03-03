@@ -1,12 +1,15 @@
-header {
+.profile {
   display:flex;
   flex-direction: column;
   align-items: center;
+  height: 600px;
+  justify-content: center;
   padding-top: 100px;
-  background-color: var(--body-background);
+  background-color: #945c17;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
-h2 {
+.profile--username > h2 {
+  color: #ffff;
   margin:0px;
 }

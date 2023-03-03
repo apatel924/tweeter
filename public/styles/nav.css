@@ -1,25 +1,23 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #21377e;
   color: #FFFFFF;
   font-family: Bungee, sans-serif;
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-nav .title {
-  font-size: 2em;
+  position:fixed;
+  top: 0;
 }
 
 /* new tweet */
 nav > span {
   align-self: center;
   font-family: Bungee;
-  margin-top: 30px;
-  font-size: 36px;
+  margin-top: 24px;
+  font-size: 32px;
 }
 
 .nav--write-new-tweet {
@@ -34,6 +32,16 @@ nav > span {
   margin-top: 30px;
   font-family: sans-serif;
   font-weight: 250;
+}
+
+.nav--write-new-tweet:hover {
+  color: #7e4806;
+  cursor: pointer;
+}
+
+.nav--write-new-tweet > p {
+  margin: 0px;
+
 }
 
 .nav--write-new-tweet > p > span {

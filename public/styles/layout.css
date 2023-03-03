@@ -24,15 +24,21 @@ html {
   align-items: center;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-  background-color: inherit;
-}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+width: 90%;
+}
+
+h3 {
+  margin: 0px;
+  margin-top: 1em;
+  border-bottom: 0.2em solid #3f3e3d;
+  font-weight: 450;
+  font-size: 2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}

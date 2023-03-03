@@ -3,15 +3,20 @@ margin-top: 1em;
 width: 100%;
 };
 
-.new-tweet--input {
-  display:block;
-  height: 2em;
+#tweet-text {
+  display: block;
+  height: auto;
   width: 100%;
+  padding: 0;
   background-color: transparent;
-  font-weight: 700;
+  font-weight: 600;
   resize: none;
   border: 0px;
   border-bottom: 0.1em solid black;
+}
+
+#tweet-text:focus {
+  outline: none;
 }
 
 .new-tweet--input:focus {
@@ -24,7 +29,7 @@ width: 100%;
   font-family: "Bungee";
 }
 
-.new-tweet--footer > button {
+.new-tweet-footer > button {
   background-color: #2a4fc9;
   color: #ffff;
   border: 0px;
@@ -49,10 +54,26 @@ width: 100%;
   font-family: 'Bungee', cursive;
 }
 
+#error {
+  display: flex;
+  align-items: center;
+  align-self: self-end;
+  color: red;
+  margin: 0px;
+  font-weight: 400;
+  padding-top: 0.2em;
+}
+
+#error > * {
+  margin: 0px;
+  padding-right: 0.2em;
+}
+
+
+
 /*container */
 
 #tweets-container {
-  padding: 1em;
   display: flex;
   flex-direction: column;
 }
@@ -77,8 +98,8 @@ width: 100%;
 }
 
 .tweet-header img {
-  height: 2em;
-  width: 2em;
+  height: 3em;
+  width: 3em;
   margin-right: 1em;
 }
 
@@ -106,4 +127,9 @@ width: 100%;
 .tweet-footer > div {
   display: flex;
   align-items: center;
+}
+
+.tweet-footer > div > i {
+  padding-left: 1em;
+  color: #1b2c64;
 }
