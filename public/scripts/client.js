@@ -46,7 +46,7 @@ $(document).ready(() => {
         </header>
         <p>${content.text}</p>
         <footer class="tweet-footer">
-          <p>${timeStamp}</p>
+          <p>${timeago.format(timeStamp)}</p>
           <div>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>

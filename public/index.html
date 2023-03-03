@@ -6,9 +6,11 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
 
     <!-- App CSS -->
@@ -21,6 +23,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.full.min.js" integrity="sha512-wb3lqal2VtYhmlPAr232VP+Zus676CFAEYdywxIUSxG6F/X9WhN6SpREkWUdwBvMpd6gCKuKTGHhdum6m1wOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 
     <!-- App JS -->
@@ -52,47 +55,25 @@
       </div>
   </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">  
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">  
       <form action ="/tweets" method="POST">
         <textarea 
-        class="new-tweet--input"
-        name="text" 
-        id="tweet-text" 
-        placeholder="What are you humming about?"></textarea>
-      <div class="new-tweet--footer">
-        <button type="submit">Tweet</button>
-        <output name="counter" class="counter" for="tweet-text">140</output>
-      </div>
-    </form>
-  </section>
-  <h3>Latest Tweets</h3>
-  <section id="tweets-container">
-  </section>
-      </div>
-    </form>
-  </section>
-  <section id="tweets-container">
-    <header class="tweet-header">
-      <div>
-        <img src=""/>
-        <p>Username</p>
-      </div>
-      <p>@userhandle</p>
-    </header>
-    <article class="tweet">
-      Hello world!
-    </article>
-    <footer class="tweet-footer">
-      <p>10 days ago</p>
-      <div>
-        <i class="fa-solid fa-flag"></i>
-        <i class="fa-solid fa-retweet"></i>
-        <i class="fa-solid fa-heart"></i>
-      </div>
-    </footer>
-  </section>
-</main>
-</body>
+          class="new-tweet--input"
+          name="text" 
+          id="tweet-text" 
+          placeholder="What are you humming about?"></textarea>
+        <div class="new-tweet--footer">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    <h3>Latest Tweets</h3>
+    <section id="tweets-container">
+    </section>
+      <button id="return-to-top"><i class="fa-solid fa-angles-up"></i></button>
+    </main>
+  </body>
 </html>
