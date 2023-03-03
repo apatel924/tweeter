@@ -15,13 +15,10 @@ html {
  */
 
  body {
-  display: flex;
-  flex-direction: column;
-  color:grey;
-  background-color:grey;
+  color:#3f3e3d;
+  background-color: #ffff;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-  align-items: center;
 }
 
 
@@ -29,8 +26,10 @@ html {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-width: 90%;
+ .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h3 {
@@ -41,4 +40,50 @@ h3 {
   font-size: 2em;
   margin-left: 0.5em;
   margin-right: 0.5em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    margin-top: 3rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  body > nav {
+    background-color: #21377e;
+    position: static;
+  }
+
+  .container > .profile {
+    width: 25vw;
+    height: 25vw;
+    padding-top: 0;
+    align-self: flex-start;
+
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .content {
+    width: 60vw;
+  }
+
+  .content > .new-tweet {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .profile-avatar {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+  }
 }

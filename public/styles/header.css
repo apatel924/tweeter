@@ -9,7 +9,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
-.profile--username > h2 {
+.profile-username {
   color: #ffff;
   margin:0px;
 }

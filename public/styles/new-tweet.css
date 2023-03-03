@@ -3,7 +3,7 @@ margin-top: 1em;
 width: 100%;
 };
 
-#tweet-text {
+.tweet-text {
   display: block;
   height: auto;
   width: 100%;
@@ -19,11 +19,11 @@ width: 100%;
   outline: none;
 }
 
-.new-tweet--input:focus {
+.new-tweet-input:focus {
   outline: none;
 }
 
-.new-tweet--footer > button {
+.new-tweet-footer > button {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee";
