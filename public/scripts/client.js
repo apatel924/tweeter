@@ -5,14 +5,15 @@
  */
 
 $(document).ready(() => {
+  /* Get jQuery elements */
   const $tweetsContainer = $('#tweet-container');
   const $error = $("#error");
   const $form = $("form");
   const $newTweetSection = $(".new-tweet");
   const $newTweetWrite = $(".write-new-tweet");
-  /* Helper fuctions */
+
   const escape = (str) => {
-    let div = $("<div>").text(str);;
+    let div = $("<div>").text(str);
     return div[0].innerHTML;
   };
 
@@ -20,6 +21,7 @@ $(document).ready(() => {
     const user = tweetData.user;
     const content = tweetData.content;
     const timeStamp = tweetData.created_at;
+
     const tweetElement = $(`
       <article class="tweet">  
         <header class="tweet-header">
@@ -29,7 +31,7 @@ $(document).ready(() => {
           </div>
           <p>${user.handle}</p>
         </header>
-        <p>${content.text}</p>
+        <p>${escape(content.text)}</p>
         <footer class="tweet-footer">
           <p>${timeago.format(timeStamp)}</p>
           <div>
@@ -41,20 +43,22 @@ $(document).ready(() => {
       </article>
     `);
     return tweetElement;
-  }
+  };
+
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      tweetsContainer.prepend($tweet);
+      $tweetsContainer.prepend($tweet);
     }
   };
+
   const resetFrom = () => {
     $form.trigger("reset");
     console.log($form);
 
     $form[0][2].innerText = 140;
   };
-
+  
   const formInputError = (message) => {
     $error.empty();
     $error.append('<i class="fa-solid fa-triangle-exclamation"></i>');
@@ -75,12 +79,11 @@ $(document).ready(() => {
 
   $form.on("input", (event) => {
     event.preventDefault();
-    $error.empty()
+    $error.empty();
   });
 
   $form.on("submit", (event) => {
     event.preventDefault();
-
     const userInput = event.currentTarget[0].value;
 
     const noInput = "Please input message";
@@ -88,7 +91,7 @@ $(document).ready(() => {
     const inputOverLimit = "Message too long";
 
     if (!userInput) {
-     formInputError(noInput);
+      formInputError(noInput);
     } else if (userInput.length > 140) {
       formInputError(inputOverLimit);
     } else {
@@ -100,19 +103,18 @@ $(document).ready(() => {
           $error.empty();
           loadTweets();
           resetFrom();
-          $newTweetSection.slideUp();
-        }, 
+        },
       });
     }
   });
   
   $newTweetWrite.on("click", (event) => {
+    /* Display new tweet textarea */
     if ($newTweetSection.is(":hidden")) {
       $newTweetSection.slideDown();
-      $(".new-tweet--input").focus();
-      return
+      $("#tweet-text").focus();
+      return;
     }
-
     $newTweetSection.slideUp();
   });
   loadTweets();
