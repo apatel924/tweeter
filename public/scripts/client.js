@@ -5,11 +5,11 @@
  */
 
 $(document).ready(() => {
-  const $tweetsContainer = $('#tweets-container');
+  const $tweetsContainer = $('#tweet-container');
   const $error = $("#error");
   const $form = $("form");
   const $newTweetSection = $(".new-tweet");
-  const $newTweetWrite = $(".nav--write-new-tweet");
+  const $newTweetWrite = $(".write-new-tweet");
   /* Helper fuctions */
   const escape = (str) => {
     let div = $("<div>").text(str);;

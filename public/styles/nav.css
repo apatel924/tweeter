@@ -1,11 +1,11 @@
 nav {
   display: flex;
-  height: 90px;
+  height: 120px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   position:fixed;
-  background-color: #21377e;
+  background-color: #001b61;
   color: #FFFFFF;
   font-family: Bungee, sans-serif;
   padding: 0 1.5em;

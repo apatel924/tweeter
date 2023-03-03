@@ -7,7 +7,7 @@ html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing:inherit;
 }
 
 /*
@@ -50,13 +50,12 @@ h3 {
 
 @media only screen and (min-width: 1024px) {
   .container {
-    margin-top: 3rem;
     flex-direction: row;
     justify-content: space-around;
   }
 
   body > nav {
-    background-color: #21377e;
+    background-color: #001b61;
     position: static;
   }
 
