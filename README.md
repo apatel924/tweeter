@@ -6,14 +6,20 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+Main page
 !["Screenshot of Main page"](https://github.com/apatel924/tweeter/blob/master/docs/main-page.png)
 
+No message error
 !["Screenshot of no message "error" "](https://github.com/apatel924/tweeter/blob/master/docs/no-message-error.png)
 
+Message too long error
 !["Screenshot of message too long "error""](https://github.com/apatel924/tweeter/blob/master/docs/message%20too%20long%20error.png)
 
+New tweet
 !["Screenshot of New Tweet"](https://github.com/apatel924/tweeter/blob/master/docs/New-tweet.png)
 
+
+Resized page
 !["Screenshot of resized page"](https://github.com/apatel924/tweeter/blob/master/docs/portrait-mode.png)
 
 
