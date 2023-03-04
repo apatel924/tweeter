@@ -1,10 +1,11 @@
 .new-tweet {
-display: none;
-width: 100%;
-margin-top: 1em;
-};
+  display: none;
+  width: 100%;
+  margin-top: 1em;
+}
 
 #tweet-text {
+  outline: none;
   display: block;
   height: auto;
   width: 100%;
@@ -16,17 +17,13 @@ margin-top: 1em;
   border-bottom: 0.1em solid black;
 }
 
-#tweet-text:focus {
-  outline: none;
-}
-
 .new-tweet-footer {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee";
 }
 
-.new-tweet-footer > button {
+.new-tweet-footer>button {
   background-color: #2a4fc9;
   color: #ffff;
   border: 0px;
@@ -52,7 +49,7 @@ margin-top: 1em;
   padding-top: 0.2em;
 }
 
-#error > * {
+#error>* {
   margin: 0px;
   padding-right: 0.2em;
 }
