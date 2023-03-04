@@ -12,7 +12,7 @@ nav {
   top: 0;
 }
 
-/* new tweet */
+/* new tweet and tweet title*/
 nav > span {
   align-self: center;
   font-family: Bungee;
@@ -35,7 +35,7 @@ nav > span {
 }
 
 .write-new-tweet:hover {
-  color: #7e4806;
+  color: #000000;
   cursor: pointer;
 }
 

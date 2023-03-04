@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $(".new-tweet form textarea").on("input", function() {
+  $("#tweet-text").on("input", function() {
     const userInput = $(this).val();
     const charLimit = 140;
     const counter = $(this).parents().find(".counter");

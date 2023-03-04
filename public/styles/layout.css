@@ -50,6 +50,7 @@ h3 {
 
 @media only screen and (min-width: 1024px) {
   .container {
+    margin-top: 3rem;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -59,12 +60,15 @@ h3 {
     position: static;
   }
 
+  body > nav > .write-new-tweet:hover {
+    color: #000000;
+  }
+
   .container > .profile {
     width: 25vw;
     height: 25vw;
     padding-top: 0;
     align-self: flex-start;
-
   }
 
   h3 {

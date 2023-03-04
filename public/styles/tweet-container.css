@@ -1,4 +1,3 @@
-
 #tweet-container {
   display: flex;
   flex-direction: column;
@@ -12,15 +11,15 @@
   margin-bottom: 1em;
 }
 
+.tweet:hover {
+  box-shadow: 10px 10px rgb(85, 81, 81);
+}
+
 .tweet-header {
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-}
-
-.tweet:hover {
-  box-shadow: 10px 10px rgb(85, 81, 81);
 }
 
 .tweet-header img {

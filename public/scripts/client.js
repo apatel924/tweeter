@@ -6,7 +6,7 @@
 
 $(document).ready(() => {
   /* Get jQuery elements */
-  const $tweetsContainer = $('#tweet-container');
+  const $tweetContainer = $('#tweet-container');
   const $error = $("#error");
   const $form = $("form");
   const $newTweetSection = $(".new-tweet");
@@ -48,7 +48,7 @@ $(document).ready(() => {
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $tweetsContainer.prepend($tweet);
+      $tweetContainer.append($tweet);
     }
   };
 
@@ -66,12 +66,13 @@ $(document).ready(() => {
   };
 
   const loadTweets = () => {
+    $tweetContainer.empty();
     $.ajax({
       method: "GET",
       url: "/tweets",
       dataType: "JSON",
       success: (response) => {
-        $tweetsContainer.empty();
+        console.log("test", response)
         renderTweets(response);
       },
     });
